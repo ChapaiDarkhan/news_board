@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '0.0.0.0',
     'guoguoblog.herokuapp.com',
+    'secret-hollows-82889.herokuapp.com',
     'https://secret-hollows-82889.herokuapp.com/'
 ]
 
