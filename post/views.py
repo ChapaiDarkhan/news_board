@@ -13,11 +13,3 @@ class CommentView(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
-#
-# class VoteView(APIView):
-#     queryset = Post.objects.all()
-#     serializer_class = PostSerializer
-#
-#     def post(self, pk):
-#         queryset = Post.objects.get(id=pk).first()
-#         queryset
