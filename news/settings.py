@@ -86,6 +86,7 @@ DATABASES = {
         'NAME': 'news',
         'USER': 'news',
         'PASSWORD': 'news',
+        'HOST': 'secret-hollows-82889.herokuapp.com',
         'PORT': 5432,
     }
 }
