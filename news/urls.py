@@ -15,9 +15,17 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import path, include
+
+
+def ping(request):
+    data = {'ping': 'pong!'}
+    return JsonResponse(data)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('post.urls')),
+    path('ping/', ping, name="ping"),
 ]
