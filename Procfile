@@ -1,1 +1,1 @@
-web: docker-compose up --build
+web: gunicorn news.wsgi
