@@ -1,6 +1,5 @@
 import logging
-from datetime import datetime
-
+from post.models import Post
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 
@@ -10,9 +9,8 @@ logger = logging.getLogger(__name__)
 
 
 @scheduler.scheduled_job(IntervalTrigger(seconds=3))
-def train_model():
-    logger.info('Book %s is exported', datetime.now())
-    print('dask train_model! The time is: %s' % datetime.now())
+def update_posts_votes():
+    queryset = Post.objects.all().update(votes_number=0)
 
 
 scheduler.start()
