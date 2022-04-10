@@ -8,10 +8,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "news.settings")
 django.setup()
 
 
-@scheduler.scheduled_job(IntervalTrigger(seconds=3))
+@scheduler.scheduled_job(IntervalTrigger(hours=24))
 def update_posts_votes():
     from post import models
-    print("here")
     models.Post.objects.all().update(votes_number=0)
 
 
