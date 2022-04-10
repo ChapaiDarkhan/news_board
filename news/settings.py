@@ -82,12 +82,8 @@ WSGI_APPLICATION = 'news.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'news',
-        'USER': 'news',
-        'PASSWORD': 'news',
-        'HOST': 'secret-hollows-82889.herokuapp.com',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
