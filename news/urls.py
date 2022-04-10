@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.http import JsonResponse
 from django.urls import path, include
@@ -27,5 +29,5 @@ def ping(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('post.urls')),
-    path('', ping, name="ping"),
-]
+    path('', ping, name="ping")
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

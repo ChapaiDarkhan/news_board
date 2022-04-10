@@ -1,4 +1,3 @@
-from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
 from api.serializers import PostSerializer, CommentSerializer
